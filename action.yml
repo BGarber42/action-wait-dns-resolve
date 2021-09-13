@@ -1,0 +1,15 @@
+# action.yml
+name: 'Resolve Hostname'
+description: 'Test DNS Resolution'
+inputs:
+  remotehost:  # id of input
+    description: 'Hostname to Resolve'
+    required: true
+    default: 'google.com'
+  recordtype:
+    description: 'Record to Resolve'
+    required: false
+    default: 'A'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
