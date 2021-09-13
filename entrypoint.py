@@ -8,7 +8,7 @@ resolver = dns.resolver.Resolver()
 
 
 @backoff.on_exception(
-    backoff.expo, dns.resolver.NXDOMAIN, max_time=os.environ.get("INPUT_MAXTIME", 60)
+    backoff.expo, dns.resolver.NXDOMAIN, max_time=float(os.environ.get("INPUT_MAXTIME", 60))
 )
 def resolve(host, record='A'):
     resolver.resolve(host, record)
