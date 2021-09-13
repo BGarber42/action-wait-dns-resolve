@@ -10,6 +10,10 @@ inputs:
     description: 'Record to Resolve'
     required: false
     default: 'A'
+  maxtime:
+    description: "Maximum Seconds to Wait"
+    required: false
+    default: 60
 runs:
   using: 'docker'
   image: 'Dockerfile'

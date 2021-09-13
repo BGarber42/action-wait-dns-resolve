@@ -14,3 +14,4 @@ jobs:
         with:
           remotehost: 'google.com'
           recordtype: 'A'
+          maxtime: 300
